@@ -8,7 +8,7 @@ import SmallCard from '../components/SmallCard'
 
 export default function Home() {
 
-  const exploredata = [1,2,3,4,5,6,7,8,9,10,11,12]
+  const exploredata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 
   return (
@@ -16,17 +16,21 @@ export default function Home() {
       <Head>
         <title>Airbnb Clone</title>
         <link rel="icon" href="/images/Airbnb_icon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&family=Raleway:wght@300&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Quicksand&display=swap" rel="stylesheet" />
       </Head>
 
-      <Header/>
-      <HomeHero/>
+      <Header />
+      <HomeHero />
       <main className="max-w-[1760px] mx-auto px-8 sm:px-16">
-        <section className="pt-6">
+        <section className="pt- relative -top-10">
           {/**explore nearby */}
           <h2 className="text-3xl font-bold">Explore Nearby</h2>
           {/** render items here*/}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4">  
-            {exploredata?.map((value,index)=> <SmallCard key={index}></SmallCard>) }
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4">
+            {exploredata?.map((value, index) => <SmallCard key={index}></SmallCard>)}
           </div>
         </section>
         <section className="pt-6">
@@ -34,14 +38,14 @@ export default function Home() {
           <h2 className="text-3xl font-bold">Live Anywhere</h2>
           {/**render items here */}
           <div className="my-5 flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
-          {exploredata.map((value,index)=><LargeCard key={index}/>)}
+            {exploredata.map((value, index) => <LargeCard key={index} />)}
           </div>
         </section>
         <section className="mt-16 mb-5">
           {/**xl card */}
-          <ExtraLargeCard/>
+          <ExtraLargeCard />
         </section>
-        <Footer/>
+        <Footer />
       </main>
     </div>
   )
